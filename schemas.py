@@ -6,3 +6,6 @@ class UserCreate(BaseModel):
 
 class UserResponse(UserCreate):
     id: int
+
+    class Config:
+        orm_mode = True

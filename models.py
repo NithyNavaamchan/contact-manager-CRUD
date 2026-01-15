@@ -3,9 +3,8 @@ from database import Base
 
 class User(Base):
     __tablename__ = "users"
-
-id = Column(Integer, primary_key=True, index=True)
-
-name = Column(String(100))
-phone = Column(Integer(10))
+    
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String(100))
+    phone = Column(Integer(10))
 
