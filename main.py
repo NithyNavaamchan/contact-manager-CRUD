@@ -47,7 +47,7 @@ def update_user(user_id: int, user: UserCreate, db: Session = Depends(get_db)):
     if not db_user:
         raise HTTPException(status_code=404, detail="User not found")
     db_user.name = user.name
-    db_user.email = user.phone
+    db_user.phone = user.phone
     db.commit()
     db.refresh(db_user)
     return db_user
