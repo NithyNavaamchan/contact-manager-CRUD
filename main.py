@@ -20,7 +20,7 @@ def get_db():
 #create user
 @app.post("/users", response_model=UserResponse)
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
-    db_user = user(name=user.name, phone=user.phone)
+    db_user = User(name=user.name, phone=user.phone)
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
