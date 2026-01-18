@@ -5,6 +5,6 @@ class User(Base):
     __tablename__ = "users"
     
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String(100))
-    phone = Column(Integer(10))
+    name = Column(String(100), nullable=False)
+    phone = Column(String(10), nullable=False)
 
